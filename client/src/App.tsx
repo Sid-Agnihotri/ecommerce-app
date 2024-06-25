@@ -1,14 +1,18 @@
 import React from 'react'
 import './App.css'
 import Navigation from './customer/components/Navigation/Navigation'
+import HomePage from './customer/pages/HomePage'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Navigation />
-      Test
+      <div>
+        <Navigation />
+      </div>
+      <div>
+        <HomePage />
+      </div>
     </div>
   )
 }
-
 export default App

@@ -169,7 +169,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function Navigation() {
+const Navigation = () => {
   const [open, setOpen] = useState(false)
 
   return (

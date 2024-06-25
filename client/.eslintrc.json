@@ -3,17 +3,20 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "airbnb",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "plugins": [
     "react",
-    "prettier"
+    "prettier",
+    "@typescript-eslint"
   ],
   "env": {
     "browser": true,
     "es2021": true,
     "jest": true
   },
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -22,7 +25,26 @@
     "sourceType": "module"
   },
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".jsx",
+          ".tsx"
+        ]
+      }
+    ],
+    "import/extensions": "off",
+    // Added rule to disable import/extensions
+    "import/no-unresolved": "off"
     // other custom rules
   },
   "settings": {

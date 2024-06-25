@@ -1,10 +1,16 @@
 import React from 'react'
-import MainCarousel from "../components/HomeCarousel/MainCarousel";
+import ProductCarousel from '../components/ProductCarousel/ProductCarousel.tsx'
+import MainCarousel from '../components/HomeCarousel/MainCarousel'
 
 const HomePage = () => {
-    return (
-        <div><MainCarousel /></div>
-
-    )
+  return (
+    <div>
+      <MainCarousel />
+      <div>
+        <ProductCarousel />
+      </div>
+    </div>
+  )
 }
+
 export default HomePage
